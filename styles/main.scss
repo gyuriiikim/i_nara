@@ -1,0 +1,53 @@
+@mixin flex-row-betwwen {
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between; align-items:center;
+}
+
+$font-jua:'jua', sans-serif;
+
+header {
+    position:fixed; left:0; top:0; z-index:999;
+    background:rgba(225,225,225,0.5); height:100px;
+    width:100%; padding:0 15px;
+    @include flex-row-betwwen;
+    h1 { 
+        width:150px;
+        a {img{width:100%;}}
+    }
+    .right {
+        @include flex-row-betwwen;
+        .app {
+            font-family:$font-jua;
+            border:3px solid #fff; border-radius:20px;
+            padding:15px 25px; font-weight:700;
+            margin-right:20px;
+        }
+        .all_nav {
+            span {
+                margin:5px 0; display:block;
+                width:30px; height:5px;
+                border-radius:5px;
+                background:#fff;
+            }
+            span:nth-child(1) {}
+            span:nth-child(2) {margin:5px 0;}
+            span:nth-child(3) {}
+        }
+    }
+} // header-end
+main {
+    .bnr {
+        position:relative;
+        .container {position:absolute; text-align:center;
+            h1 {
+                font-size:2rem;
+            }
+            p {}
+            .btn {}
+        }
+        video {}
+        .page_down {
+            img{}
+        }
+    } //bnr-end
+} //main-end
