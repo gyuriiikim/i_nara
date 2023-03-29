@@ -72,14 +72,19 @@ main {
         position:absolute; left:0; top:0; z-index:105;
     } //bnr-end
     .event_wrap {
-        background:lightblue; width:1200px; margin:0 auto; 
-        h1 {font-family:$font-jua;} padding:50px 0;
+        background:#fff; width:1200px; margin:0 auto;
+        padding:50px 0;
+        h1 {font-family:$font-jua;} 
         p {}
-        .more {}
+        .more {
+            font-family:$font-jua;
+            img {}
+        }
         .slide_wrap {
             .slide_container {display:grid;
                 grid-template-columns:repeat(3,1fr);
                 grid-template-rows:300px;
+                margin:100px 0;
                 .slide1 {background:#ffe552 url(../images/event_image_0_20221028085348_35465.png);}
                 .slide2 {
                     background:#b2e9de url(../images/event_image_0_20221028085704_61822.png);
@@ -90,21 +95,85 @@ main {
                 }
                 .slide {
                     background-repeat:no-repeat;
-                    background-size:60%;
-                    background-position:right
+                    background-size:70%;
+                    background-position:right bottom;
                     padding:30px; border-radius:20px;
+                    position:relative;
                     h1 {font-size:1.875rem; line-height:1.5;}
                     p {}
                     .more {
-                        font-family:$font-jua; 
+                        width:30px; display:block;
+                        position:absolute; bottom:50px;
+                        img {width:100%;}
                     }
                 }
             }//e:sld_container
         }//e:sld_wrap
     }//e:event_wrap
-    .event_wrap > h1 {
+    #intro_wrap {
+        background:lightblue; width:1200px; margin:0 auto;
+        padding:100px 0;
+        h1 {font-family:$font-jua;}
+        p {}
+        .more {
+            font-family:$font-jua;
+            img{}
+        }
+        .menu_wrap {
+            .menu_container {
+                display:grid;
+                grid-template-columns:repeat(5,1fr);
+                grid-template-rows:300px;
+                margin:100px 0;
+                .menu > h2 {
+                    font-family:$font-jua;
+                    padding:10px; border-radius:50px;
+                    display:inline-block;
+                }
+                .menu1 {
+                    background:url(../images/thumbnail_image_1_20221104060651_67302.jpeg) center;
+                    h2 {background-color:#ffcfd8;}
+                    .play {
+                        img{}
+                    }
+                }
+                .menu2 {
+                    background:url(../images/thumbnail_image_2_20221104060915_64092.jpeg) center;
+                    h2 {background-color:#b2e9de;}
+                    .play {img{}}
+                }
+                .menu3 {
+                    background:url(../images/thumbnail_image_3_20221104060928_38608.jpeg) center;
+                    h2 {background-color:#ffe552;}
+                    .play {img{}}
+                }
+                .menu4 {
+                    background:url(../images/thumbnail_image_4_20221104060946_71750.jpeg) center;
+                    h2 {background-color:#b2e9de;}
+                    .play {img{}}
+                }
+                .menu5 {
+                    background:url(../images/thumbnail_image_5_20221104060955_15559.jpeg) center;
+                    h2 {background-color:antiquewhite;}
+                    .play {img{}}
+                }
+                .menu:nth-child(5) {margin:0;}
+                .menu {
+                    background-repeat:no-repeat;
+                    background-size:100%;
+                    padding:30px; border-radius:20px;
+                    margin-right:15px;
+                }
+            }
+        }
+    }
+    .event_wrap > h1,
+    #intro_wrap > h1 {
         font-size:2.5rem; line-height:1.5;
         margin:20px 0;
     }
-    .event_wrap > p {margin-bottom:20px;}
+    .event_wrap > p,
+    #intro_wrap > p {
+        margin-bottom:20px;
+    }
 } //end:main
